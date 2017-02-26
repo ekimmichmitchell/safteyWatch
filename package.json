@@ -16,6 +16,12 @@
         "resources": {
             "media": [
                 {
+                    "file": "images/icon.png",
+                    "name": "SPLASH_ICON",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/weather_icon.png",
                     "name": "IMAGE_SPLASH",
                     "targetPlatforms": null,
