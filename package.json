@@ -13,8 +13,14 @@
         "resources": {
             "media": [
                 {
-                    "file": "images/weather_icon.png",
+                    "file": "images/timeoutlogo.png",
                     "name": "IMAGE_SPLASH",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/weather_icon.png",
+                    "name": "IMAGE_SPLASH1",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 }

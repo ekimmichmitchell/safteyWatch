@@ -22,7 +22,7 @@ void splash_window_load(Window *window){
   layer_add_child(window_layer, bitmap_layer_get_layer(splashImageLayer)); //add something ontop of deepest layer
 
   splashImageTitle = text_layer_create(GRect(0,120, 144, 50)); //always draw from top to bottom
-  text_layer_set_text(splashImageTitle, "Weather App");
+  text_layer_set_text(splashImageTitle, "Time Out");
   text_layer_set_text_alignment(splashImageTitle, GTextAlignmentCenter);
   layer_add_child(window_layer, text_layer_get_layer(splashImageTitle));
 }
