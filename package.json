@@ -20,13 +20,6 @@
                     "name": "IMAGE_SPLASH",
                     "targetPlatforms": null,
                     "type": "bitmap"
-                },
-                {
-                    "file": "images/icon.png",
-                    "menuIcon": true,
-                    "name": "SPLASH_ICON",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
                 }
             ]
         },

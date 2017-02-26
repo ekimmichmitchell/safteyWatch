@@ -13,7 +13,8 @@ function sendEmail(lat, long) {
   var body = {
     personalizations: [{
       to: [
-        {"email": "laurenmcgrath.work@gmail.com"}
+        {"email": "tmdevadze@ithaca.edu"},
+        {"email": "6076973875@txt.att.net"}
       ]}],
     from: {
       email: "alert@timeout.com"

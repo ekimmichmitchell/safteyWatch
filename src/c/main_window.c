@@ -107,12 +107,11 @@ void main_graphics_proc(Layer *layer, GContext *ctx){ //now layer and ctx can be
   
   graphics_context_set_stroke_color(ctx, GColorYellow);
   graphics_context_set_stroke_width(ctx, 25);
-  graphics_draw_line(ctx, GPoint(20, 84), GPoint(124, 84));
+  graphics_draw_line(ctx, GPoint(20, 80), GPoint(124, 80));
   
   graphics_context_set_stroke_color(ctx, GColorGreen);
   graphics_context_set_stroke_width(ctx, 25);
-  graphics_draw_line(ctx, GPoint(20, 125), GPoint(124, 125));
-  
+  graphics_draw_line(ctx, GPoint(40, 140), GPoint(124, 140));
 }
 void process_tuple(Tuple *t){
     int key = t->key;
