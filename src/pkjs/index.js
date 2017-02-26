@@ -38,7 +38,7 @@ function sendEmail(lat, long) {
   // Send the request
   request.open(method, url);
   request.setRequestHeader("Content-type", "application/json");
-  request.setRequestHeader("Authorization", "Bearer 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");
+  request.setRequestHeader("Authorization", "Bearer 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");
   request.send(JSON.stringify(body));
 }
 
