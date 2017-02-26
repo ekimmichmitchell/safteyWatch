@@ -18,8 +18,6 @@ void splash_window_load(Window *window){
   splashImageLayer = bitmap_layer_create(GRect(0,0,144,120)); //x coord,y coord, width, height
   
   bitmap_layer_set_bitmap(splashImageLayer, splashImage);
-  //text_layer_set_text(splashImageTitle, "Weather App");
-  //text_layer_set_text_alignment(splashImageTitle GTextAlignmentCenter);
   bitmap_layer_set_compositing_mode(splashImageLayer, GCompOpSet);
   layer_add_child(window_layer, bitmap_layer_get_layer(splashImageLayer)); //add something ontop of deepest layer
 
