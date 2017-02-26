@@ -53,6 +53,10 @@ void menu_draw_row_callback(GContext* ctx, const Layer *cell_layer, MenuIndex *c
     }  
 }
 
+//void menu_layer_set_normal_colors(MenuLayer * menu_layer, GColor background, GColor foreground){
+  
+//}
+
 void menu_select_callback(MenuLayer *menu_layer, MenuIndex *cell_index, void *data) { //detect when someone clicks on menu layer
 	
 }

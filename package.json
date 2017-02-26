@@ -13,8 +13,14 @@
         "resources": {
             "media": [
                 {
-                    "file": "images/timeoutlogo.png",
+                    "file": "images/Time Out smartwatch logo2.png",
                     "name": "IMAGE_SPLASH",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/timeoutlogo.png",
+                    "name": "IMAGE_SPLASH3",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
