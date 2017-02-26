@@ -64,6 +64,20 @@ void menu_select_callback(MenuLayer *menu_layer, MenuIndex *cell_index, void *da
   //any time you click any row, displays error window 
  error_window_set_error("All Set!");
   error_window_show();
+  
+  DictionaryIterator *iter; //write vals to dictionary
+  //????
+  app_message_outbox_begin(&iter); //passing in dict it
+  
+  //checking that it exsits, if we do, reject request
+  if(iter == NULL){
+    APP_LOG(APP_LOG_LEVEL_ERROR, "Iter is null! Refusing to send");
+    return;
+  }
+  dict_write_uint16(iter, 10000, 713);
+  dict_write_end(iter);
+  
+  app_message_outbox_send();
 }
 
 void setup_menu_layer(Window *window) {
@@ -99,9 +113,36 @@ void main_graphics_proc(Layer *layer, GContext *ctx){ //now layer and ctx can be
   graphics_context_set_stroke_width(ctx, 30);
   graphics_draw_line(ctx, GPoint(10, 140), GPoint(124, 140));
 }
+void process_tuple(Tuple *t){
+    int key = t->key;
+    int value = t->value->int32;
+  
+    APP_LOG(APP_LOG_LEVEL_INFO, "Got key %d with value %d", key, value);
+}
+
+void message_inbox(DictionaryIterator *iter, void *context){ //called when you get message from js
+    Tuple *t = dict_read_first(iter);
+    if(t){
+        process_tuple(t); //if exists, send it over
+    }
+    while(t != NULL){
+        t = dict_read_next(iter);
+        if(t){
+            process_tuple(t);
+        }
+    }
+}
+
+void message_inbox_dropped(AppMessageResult reason, void *context){ //called if pebble gives up
+    APP_LOG(APP_LOG_LEVEL_INFO, "Message dropped, reason %d.", reason);
+}
 void main_window_load(Window *window){
   setup_menu_layer(window);
   Layer *window_layer = window_get_root_layer(window);
+  
+  app_message_register_inbox_received(message_inbox);
+  app_message_register_inbox_dropped(message_inbox_dropped);
+  app_message_open(256, 256);
   
   stripe = layer_create(GRect(0,0, 144, 168));
   layer_set_update_proc(stripe, main_graphics_proc); //for this layer, this is update procedure
