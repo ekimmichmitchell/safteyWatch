@@ -4,7 +4,7 @@
 Window *mainWindow;
 MenuLayer *mainMenuLayer;
 uint16_t menu_get_num_sections_callback(MenuLayer *menu_layer, void *data) { //menu later, data pointer reference
-  return 2;
+  return 3;
 }
 
 uint16_t menu_get_num_rows_callback(MenuLayer *menu_layer, uint16_t section_index, void *data) { //section index: amount of rows, use in switch
@@ -12,6 +12,8 @@ uint16_t menu_get_num_rows_callback(MenuLayer *menu_layer, uint16_t section_inde
     case 0:
       return 1;
     case 1:
+      return 1;
+    case 2:
       return 1;
     default:
       return 0;
@@ -25,10 +27,10 @@ int16_t menu_get_header_height_callback(MenuLayer *menu_layer, uint16_t section_
 void menu_draw_header_callback(GContext* ctx, const Layer *cell_layer, uint16_t section_index, void *data) { //section index: section drawing for
     switch(section_index){
       case 0:
-        menu_cell_basic_header_draw(ctx, cell_layer, "Cities");
+        menu_cell_basic_header_draw(ctx, cell_layer, NULL);
         break;
       case 1:
-        menu_cell_basic_header_draw(ctx, cell_layer, "Other");
+        menu_cell_basic_header_draw(ctx, cell_layer, NULL);
         break;
     }
 }
@@ -38,12 +40,15 @@ void menu_draw_row_callback(GContext* ctx, const Layer *cell_layer, MenuIndex *c
       case 0:
         switch(cell_index->row){
           case 0:
-            menu_cell_basic_draw(ctx, cell_layer, "Example","40 degrees", NULL);//title, subtitle, pixel icon
+            menu_cell_basic_draw(ctx, cell_layer, "Red",NULL, NULL);//title, subtitle, pixel icon
             break;
         }
         break;
       case 1:
-        menu_cell_basic_draw(ctx, cell_layer, "Add City",NULL, NULL); //make subtitle null for bigger text
+        menu_cell_basic_draw(ctx, cell_layer, "Yellow",NULL, NULL); //make subtitle null for bigger text
+        break;
+      case 2:
+         menu_cell_basic_draw(ctx, cell_layer, "Green",NULL, NULL); //make subtitle null for bigger text
         break;
     }  
 }
