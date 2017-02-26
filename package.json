@@ -17,6 +17,7 @@
             "media": [
                 {
                     "file": "images/icon.png",
+                    "menuIcon": true,
                     "name": "SPLASH_ICON",
                     "targetPlatforms": null,
                     "type": "bitmap"
