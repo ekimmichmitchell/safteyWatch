@@ -2,9 +2,9 @@
     "author": "laurenmcgrath.work@gmail.com",
     "dependencies": {},
     "keywords": [],
-    "name": "time-out",
+    "name": "weatherapp",
     "pebble": {
-        "displayName": "Time Out",
+        "displayName": "weatherApp",
         "enableMultiJS": true,
         "messageKeys": [
             "testkey"
@@ -13,20 +13,8 @@
         "resources": {
             "media": [
                 {
-                    "file": "images/Time Out smartwatch logo2.png",
-                    "name": "IMAGE_SPLASH",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/timeoutlogo.png",
-                    "name": "IMAGE_SPLASH3",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
                     "file": "images/weather_icon.png",
-                    "name": "IMAGE_SPLASH1",
+                    "name": "IMAGE_SPLASH",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 }
