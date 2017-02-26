@@ -16,15 +16,15 @@
         "resources": {
             "media": [
                 {
-                    "file": "images/icon.png",
-                    "menuIcon": true,
-                    "name": "SPLASH_ICON",
+                    "file": "images/weather_icon.png",
+                    "name": "IMAGE_SPLASH",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
                 {
-                    "file": "images/weather_icon.png",
-                    "name": "IMAGE_SPLASH",
+                    "file": "images/icon.png",
+                    "menuIcon": true,
+                    "name": "SPLASH_ICON",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 }
