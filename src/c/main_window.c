@@ -102,16 +102,16 @@ void main_graphics_proc(Layer *layer, GContext *ctx){ //now layer and ctx can be
 //   graphics_draw_text(ctx, currentErrorText[0], fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD), GRect(0,0,144,50), GTextOverflowModeWordWrap, GTextAlignmentCenter, NULL);
 
   graphics_context_set_stroke_color(ctx, GColorRed);
-  graphics_context_set_stroke_width(ctx, 30);
-  graphics_draw_line(ctx, GPoint(10, 30), GPoint(124, 30));
+  graphics_context_set_stroke_width(ctx, 25);
+  graphics_draw_line(ctx, GPoint(20, 35), GPoint(124, 35));
   
   graphics_context_set_stroke_color(ctx, GColorYellow);
-  graphics_context_set_stroke_width(ctx, 30);
-  graphics_draw_line(ctx, GPoint(10, 85), GPoint(124, 80));
+  graphics_context_set_stroke_width(ctx, 25);
+  graphics_draw_line(ctx, GPoint(20, 80), GPoint(124, 80));
   
   graphics_context_set_stroke_color(ctx, GColorGreen);
-  graphics_context_set_stroke_width(ctx, 30);
-  graphics_draw_line(ctx, GPoint(10, 140), GPoint(124, 140));
+  graphics_context_set_stroke_width(ctx, 25);
+  graphics_draw_line(ctx, GPoint(40, 140), GPoint(124, 140));
 }
 void process_tuple(Tuple *t){
     int key = t->key;
