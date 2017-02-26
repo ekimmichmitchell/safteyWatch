@@ -4,6 +4,9 @@
     "keywords": [],
     "name": "time-out",
     "pebble": {
+        "capabilities": [
+            "location"
+        ],
         "displayName": "Time Out",
         "enableMultiJS": true,
         "messageKeys": [
