@@ -23,11 +23,29 @@ int16_t menu_get_header_height_callback(MenuLayer *menu_layer, uint16_t section_
 }
 
 void menu_draw_header_callback(GContext* ctx, const Layer *cell_layer, uint16_t section_index, void *data) { //section index: section drawing for
-    
+    switch(section_index){
+      case 0:
+        menu_cell_basic_header_draw(ctx, cell_layer, "Cities");
+        break;
+      case 1:
+        menu_cell_basic_header_draw(ctx, cell_layer, "Other");
+        break;
+    }
 }
 
 void menu_draw_row_callback(GContext* ctx, const Layer *cell_layer, MenuIndex *cell_index, void *data) { //menu draw row contact, menu index: struct that contains two members
-    
+    switch(cell_index->section){
+      case 0:
+        switch(cell_index->row){
+          case 0:
+            menu_cell_basic_draw(ctx, cell_layer, "Example","40 degrees", NULL);//title, subtitle, pixel icon
+            break;
+        }
+        break;
+      case 1:
+        menu_cell_basic_draw(ctx, cell_layer, "Add City",NULL, NULL); //make subtitle null for bigger text
+        break;
+    }  
 }
 
 void menu_select_callback(MenuLayer *menu_layer, MenuIndex *cell_index, void *data) { //detect when someone clicks on menu layer
