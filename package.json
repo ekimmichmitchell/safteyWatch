@@ -2,9 +2,9 @@
     "author": "laurenmcgrath.work@gmail.com",
     "dependencies": {},
     "keywords": [],
-    "name": "weatherapp",
+    "name": "time-out",
     "pebble": {
-        "displayName": "weatherApp",
+        "displayName": "Time Out",
         "enableMultiJS": true,
         "messageKeys": [
             "testkey"
