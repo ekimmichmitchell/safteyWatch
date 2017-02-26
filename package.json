@@ -1,0 +1,33 @@
+{
+    "author": "laurenmcgrath.work@gmail.com",
+    "dependencies": {},
+    "keywords": [],
+    "name": "weatherapp",
+    "pebble": {
+        "displayName": "weatherApp",
+        "enableMultiJS": true,
+        "messageKeys": [
+            "testkey"
+        ],
+        "projectType": "native",
+        "resources": {
+            "media": [
+                {
+                    "file": "images/weather_icon.png",
+                    "name": "IMAGE_SPLASH",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                }
+            ]
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "basalt"
+        ],
+        "uuid": "5ccfbc13-fdbb-4dc1-a6b5-0316b024c167",
+        "watchapp": {
+            "watchface": false
+        }
+    },
+    "version": "1.0.0"
+}
