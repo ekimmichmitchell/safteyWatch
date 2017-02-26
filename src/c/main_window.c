@@ -62,7 +62,7 @@ void menu_draw_row_callback(GContext* ctx, const Layer *cell_layer, MenuIndex *c
 
 void menu_select_callback(MenuLayer *menu_layer, MenuIndex *cell_index, void *data) { //detect when someone clicks on menu layer
   //any time you click any row, displays error window 
- error_window_set_error("Hello there!");
+ error_window_set_error("All Set!");
   error_window_show();
 }
 

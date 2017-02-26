@@ -18,9 +18,9 @@ void error_graphics_proc(Layer *layer, GContext *ctx){ //now layer and ctx can b
   graphics_context_set_text_color(ctx, GColorOrange);
   graphics_draw_text(ctx, currentErrorText[0], fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD), GRect(0,0,144,50), GTextOverflowModeWordWrap, GTextAlignmentCenter, NULL);
 
-  graphics_context_set_stroke_color(ctx, GColorBlue);
-  graphics_context_set_stroke_width(ctx, 10);
-  graphics_draw_line(ctx, GPoint(10, 30), GPoint(124, 138));
+//   graphics_context_set_stroke_color(ctx, GColorBlue);
+//   graphics_context_set_stroke_width(ctx, 10);
+//   graphics_draw_line(ctx, GPoint(10, 30), GPoint(124, 138));
 }
 
 void error_window_load(Window *window){
